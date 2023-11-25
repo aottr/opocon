@@ -2,13 +2,20 @@ import { useEffect, useState } from 'react';
 import PocketBase from 'pocketbase';
 import MainLayout from '@/components/MainLayout';
 import getConfig from 'next/config';
+import { useRouter } from 'next/router';
 
 const AttendeesPage = () => {
     const [attendees, setAttendees] = useState<any[]>([]);
+    const router = useRouter();
 
     useEffect(() => {
+        const pb = new PocketBase(getConfig().publicRuntimeConfig.pocketbase);
+
+        if (!pb.authStore.isValid || pb.authStore.model == null) {
+            router.push('/login');
+        }
+
         const fetchAttendees = async () => {
-            const pb = new PocketBase(getConfig().publicRuntimeConfig.pocketbase);
             const event = await pb.collection('event').getFirstListItem('');
             const attendees = await pb.collection('event_participation').getFullList({
                 filter: `event = "${event.id}"`, expand: 'participant'

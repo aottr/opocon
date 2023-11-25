@@ -26,7 +26,7 @@ const RegistrationPage = () => {
     useEffect(() => {
         const pb = new PocketBase(publicRuntimeConfig.pocketbase);
 
-        if (!pb.authStore.isValid) {
+        if (!pb.authStore.isValid || pb.authStore.model == null) {
             router.push('/login');
         } else {
             setUser(pb.authStore.model);
