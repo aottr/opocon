@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import PocketBase from 'pocketbase';
+import PocketBase, { AuthModel } from 'pocketbase';
 import getConfig from 'next/config';
 import MainLayout from '@/components/MainLayout'
 
@@ -13,6 +13,7 @@ const RegistrationPage = () => {
     const router = useRouter();
     const { publicRuntimeConfig } = getConfig();
     const [isAdmin, setIsAdmin] = useState(false);
+    const [user, setUser] = useState<AuthModel | null>(null);
 
     const logout = () => {
         const pb = new PocketBase(publicRuntimeConfig.pocketbase);
@@ -26,16 +27,23 @@ const RegistrationPage = () => {
 
         if (!pb.authStore.isValid) {
             router.push('/login');
+        } else {
+            setUser(pb.authStore.model);
         }
+
         if (pb.authStore.model != null && pb.authStore.model.admin) {
             setIsAdmin(true);
         }
     }, []);
 
     return (<MainLayout>
-        <button onClick={logout} className='p-2 bg-red-700 text-white m-1 border-2 border-red-950'>Logout</button>
-        {isAdmin && <AdminAddUserComponent />}
-        <UserDataComponent />
+        {user && (
+            <>
+                <button onClick={logout} className='p-2 bg-red-700 text-white m-1 border-2 border-red-950'>Logout</button>
+                {isAdmin && <AdminAddUserComponent />}
+                <UserDataComponent />
+            </>
+        )}
     </MainLayout>)
 }
 

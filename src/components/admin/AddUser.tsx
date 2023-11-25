@@ -29,6 +29,7 @@ const AdminAddUserComponent = () => {
             }
 
         } catch (error) {
+            setError('Ooopsie! Something went wrong!');
             console.log(error);
         }
     }

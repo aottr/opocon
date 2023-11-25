@@ -10,7 +10,6 @@ const UserDataComponent = () => {
                 const pb = new PocketBase(getConfig().publicRuntimeConfig.pocketbase);
                 if (!pb.authStore.isValid || pb.authStore.model == null) return;
                 const user = await pb.collection('users').getOne(pb.authStore.model.id);
-                console.log(user);
                 setName(user.name);
                 setFursuiter(user.fursuiter);
                 setSpecies(user.species);
@@ -19,6 +18,7 @@ const UserDataComponent = () => {
                     setAvatar(`${getConfig().publicRuntimeConfig.pocketbase}/api/files/users/${user.id}/${user.avatar}`);
                 }
             } catch (error) {
+                setError('Ooopsie! Something went wrong!');
                 console.log(error);
             }
         }
@@ -32,11 +32,11 @@ const UserDataComponent = () => {
             const pb = new PocketBase(getConfig().publicRuntimeConfig.pocketbase);
             if (!pb.authStore.isValid || pb.authStore.model == null) return;
             const formdata = new FormData();
-            console.log(avatarUpload[0]);
             formdata.append('avatar', avatarUpload[0]);
             const res = await pb.collection('users').update(pb.authStore.model.id, formdata);
             setSuccess('Avatar uploaded successfully!!');
         } catch (error) {
+            setError('Ooopsie! Something went wrong!');
             console.log(error);
         }
     }
@@ -55,6 +55,7 @@ const UserDataComponent = () => {
                 setSuccess('Changes saved successfully!!');
             }
         } catch (error) {
+            setError('Ooopsie! Something went wrong!');
             console.log(error);
         }
     }

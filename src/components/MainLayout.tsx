@@ -28,8 +28,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <img src="/static/images/cheese_gif_spinning.gif" className='w-32 h-44 pr-4' />
             </header>
             <Navigation isLoggedIn={userData?.isValid} />
-            <div className='grid grid-rows-3 grid-cols-3 gap-2 '>
-                <aside className='row-span-3'>
+            <div className='grid grid-rows-2 grid-cols-3 gap-2 '>
+                <aside className='row-span-2'>
                     <Sidebar isLoggedIn={userData?.isValid} />
                 </aside>
                 <main className='border border-red-600 col-span-2 row-span-2  bg-orange-500'>
