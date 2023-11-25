@@ -19,7 +19,7 @@ export default function Home() {
       </p>
       <h2 className='text-2xl'>Where?</h2>
       <p className='p-4'>
-        Check zee <Link className='underline text-blue-700' href="venue">Venue</Link> tab.
+        Check zee <Link className='underline text-blue-700' href="venue.flv">Venue</Link> tab.
       </p>
       <h2 className='text-2xl'>Who?</h2>
       <p className='p-2'>
