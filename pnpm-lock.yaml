@@ -8,12 +8,18 @@ dependencies:
   next:
     specifier: 14.0.1
     version: 14.0.1(react-dom@18.0.0)(react@18.0.0)
+  pocketbase:
+    specifier: ^0.19.0
+    version: 0.19.0
   react:
     specifier: ^18
     version: 18.0.0
   react-dom:
     specifier: ^18
     version: 18.0.0(react@18.0.0)
+  react-fast-marquee:
+    specifier: ^1.6.2
+    version: 1.6.2(react-dom@18.0.0)(react@18.0.0)
 
 devDependencies:
   '@types/node':
@@ -1960,6 +1966,10 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  /pocketbase@0.19.0:
+    resolution: {integrity: sha512-bUVZfVdD17K8GnwbeDMZPEdREVg2YE0F8uHPDC0zer4VtwXUqoPCCeudTy3fhUE7pfuKnfpuPxeBSYsBY3AGIQ==}
+    dev: false
+
   /postcss-import@14.1.0(postcss@8.0.0):
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -2080,6 +2090,16 @@ packages:
       loose-envify: 1.4.0
       react: 18.0.0
       scheduler: 0.21.0
+    dev: false
+
+  /react-fast-marquee@1.6.2(react-dom@18.0.0)(react@18.0.0):
+    resolution: {integrity: sha512-bXUuW1r+Yzd8ZjsPmMDy8WJMubHAZd/7n0W/IzUQHtd0iBfxWohP6hzCFnEHWMCOtC9wxSAq/BiEnig4kdI2Vw==}
+    peerDependencies:
+      react: '>= 16.8.0 || 18.0.0'
+      react-dom: '>= 16.8.0 || 18.0.0'
+    dependencies:
+      react: 18.0.0
+      react-dom: 18.0.0(react@18.0.0)
     dev: false
 
   /react-is@16.13.1:
