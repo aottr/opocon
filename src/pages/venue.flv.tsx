@@ -52,7 +52,7 @@ const VenuePage = () => {
                         Local Trainstation(s)
                     </h2>
                     <p className='px-2'>
-                        The Local Trainstation "Rathaus Möhringen" is the closest to the Venue.
+                        The Local Trainstation &quot;Rathaus Möhringen&quot; is the closest to the Venue.
                         However, we offer a pick up service at the Trainstations in <span className='font-bold'>Immendingen</span> or <span className='font-bold'>Tuttlingen</span>. Check your connections which suits yourself the best.
                     </p>
 
