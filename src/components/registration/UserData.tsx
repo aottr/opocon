@@ -74,7 +74,6 @@ const UserDataComponent = () => {
     const [success, setSuccess] = useState('');
     return (
         <div className='p-3'>
-            <h1 className='text-2xl'>Edit Registration</h1>
             {
                 error && <p className="text-red-500 text-center bg-white p-4 border-2 border-red-600">{error}</p>
             }
@@ -88,7 +87,7 @@ const UserDataComponent = () => {
                 </label>
                 <input type="file" id="avatar" name="avatar" className='ugly_input' accept="image/png, image/jpeg, image/gif, image/webp" onChange={(file) => setAvatarUpload(file.target.files)} />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-20">
                 <button
                     className="bg-gradient-to-b from-cheese1 via-cheese2 to-cheese3 border-cheese2 border-2 w-full"
                     type="button"
@@ -97,6 +96,7 @@ const UserDataComponent = () => {
                     Upload
                 </button>
             </div>
+            <h1 className='text-2xl'>Edit Registration</h1>
             <div className="mb-4">
                 <label className="block text-red-700 text-sm font-bold mb-2" htmlFor="name">
                     Sona Name

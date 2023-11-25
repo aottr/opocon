@@ -6,6 +6,7 @@ import MainLayout from '@/components/MainLayout'
 
 import UserDataComponent from '@/components/registration/UserData';
 import AdminAddUserComponent from '@/components/admin/AddUser';
+import PasswordChangeComponent from '@/components/registration/PasswordChange';
 
 
 const RegistrationPage = () => {
@@ -42,6 +43,7 @@ const RegistrationPage = () => {
                 <button onClick={logout} className='p-2 bg-red-700 text-white m-1 border-2 border-red-950'>Logout</button>
                 {isAdmin && <AdminAddUserComponent />}
                 <UserDataComponent />
+                <PasswordChangeComponent />
             </>
         )}
     </MainLayout>)
