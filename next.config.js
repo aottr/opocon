@@ -3,7 +3,7 @@ const { version } = require('./package.json');
 const nextConfig = {
   reactStrictMode: true,
   publicRuntimeConfig: {
-    pocketbase: 'https://opocon.gay/pb',
+    pocketbase: process.env.POCKETBASE_HOST,
     appVersion: version,
   },
   output: 'standalone',
