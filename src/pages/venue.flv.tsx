@@ -58,6 +58,7 @@ const VenuePage = () => {
 
                 </div>
             </div>
+            <img src="/static/images/mouse_vrc.png" alt='T-Shirt Design' className='mt-24' />
         </MainLayout>
     )
 }

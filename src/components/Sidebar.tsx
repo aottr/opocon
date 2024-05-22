@@ -10,6 +10,7 @@ const Sidebar = ({ isLoggedIn }: { isLoggedIn?: boolean }) => {
         { label: 'Contact', href: 'contact.flv' },
         { label: 'History', href: 'history.php' },
         { label: 'Guestbook', href: 'guestbook.php' },
+        { label: 'Merch', href: 'merch.flv' },
     ]
 
     const filteredMenuItems = MENU_ITEMS.filter(item => {
