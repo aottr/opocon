@@ -27,6 +27,11 @@ export default function Home() {
 
         You can find more Information on our Discord aswell. Simply join over <Link className='underline text-blue-700' href="contact.flv">zeeContact*</Link> tab.
       </p>
+
+      <h2 className='text-2xl'>Charity ??</h2>
+      <p className='p-2'>
+        OpoCon 2024 supports the <Link className='underline text-blue-700' href="https://www.tierheim-donaueschingen.de/">Animal Shelter Kreistierheim SBK in Donaueschingen</Link>. Check out the <Link className='underline text-blue-700' href="https://charity.opocon.gay">Charity page</Link> for more information.
+      </p>
       <h2 className='text-2xl'>How can i join?!</h2>
       <p className='p-2'>
         Only special people with a invite Code can Register. If you think you absolutly desrve to be there, join our Discord for negotiation. No promises however, dont be sad if u cant make it in 2024. OpoCon currently growing and soon will be like NFC or EF or AmuricaCons.

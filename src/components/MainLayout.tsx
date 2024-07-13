@@ -21,15 +21,15 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     }, []);
 
     return (
-        <div className='font-serif w-full max-w-[800px]'>
+        <div className='font-serif w-full md:max-w-[800px]'>
             <header className='h-[220px] flex items-center justify-center'>
                 <img src="/static/images/cheese_gif_spinning.gif" className='w-32 h-44 pl-4' />
-                <h1 className='text-6xl font-bold text-black'>OpoCon 2024</h1>
+                <h1 className='text-xl md:text-6xl font-bold text-black'>OpoCon 2024</h1>
                 <img src="/static/images/cheese_gif_spinning.gif" className='w-32 h-44 pr-4' />
             </header>
             <Navigation isLoggedIn={userData?.isValid} />
-            <div className='grid grid-rows-2 grid-cols-3 gap-2 '>
-                <aside className='row-span-2'>
+            <div className='grid grid-rows-2 grid-cols-1 md:grid-cols-3 gap-2 '>
+                <aside className='hidden md:block md:row-span-2'>
                     <Sidebar isLoggedIn={userData?.isValid} />
                 </aside>
                 <main className='border border-red-600 col-span-2 row-span-2  bg-orange-500'>
